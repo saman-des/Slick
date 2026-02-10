@@ -7,10 +7,10 @@ const Step: React.FC<{ num: string; title: string; desc: string; index: number }
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: index * 0.15, duration: 0.5, ease: "easeOut" }}
-        className="flex flex-col p-10 md:p-16 border-b md:border-b-0 md:border-r border-white/10 last:border-r-0 relative group min-h-[300px] justify-between"
+        className="flex flex-col p-10 md:p-16 border-b md:border-b-0 md:border-r border-white/10 last:border-r-0 relative group min-h-[300px] justify-between bg-black/20 backdrop-blur-[2px]"
     >
         <div>
-            <div className="text-6xl md:text-7xl font-medium text-neutral-800 mb-8 group-hover:text-primary-600/50 transition-colors select-none">
+            <div className="text-6xl md:text-7xl font-medium text-neutral-800 mb-8 group-hover:text-primary-400/60 transition-colors select-none">
                 {num}
             </div>
             <h3 className="text-xl font-medium text-white mb-3">{title}</h3>
@@ -22,8 +22,8 @@ const Step: React.FC<{ num: string; title: string; desc: string; index: number }
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="border-b border-white/10">
-      <div className="p-12 md:p-24 border-b border-white/10">
+    <section id="how-it-works" className="section-ambient ambient-workflow border-b border-white/10">
+      <div className="relative z-10 p-12 md:p-24 border-b border-white/10 bg-black/20 backdrop-blur-[2px]">
         <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export const HowItWorks: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-medium mt-4 mb-4">From file to finished in minutes.</h2>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-4">
         <Step 
             index={0}
             num="01" 

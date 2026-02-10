@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 export const SecuritySection: React.FC = () => {
   return (
-    <section id="security" className="border-b border-white/10 bg-neutral-950 py-40 relative overflow-hidden">
+    <section id="security" className="section-ambient ambient-security border-b border-white/10 py-40">
         {/* Background Mesh */}
-        <div className="absolute inset-0 z-0 opacity-10" 
+        <div className="absolute inset-0 z-0 opacity-20 mix-blend-soft-light" 
              style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-[#120b22]/72 to-transparent z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
@@ -38,8 +38,8 @@ export const SecuritySection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    whileHover={{ y: -5, borderColor: "rgba(249, 115, 22, 0.3)" }}
-                    className="bg-[#0a0a0a] border border-white/10 p-8 rounded-xl transition-all duration-300 flex flex-col items-center text-center md:items-start md:text-left"
+                    whileHover={{ y: -5, borderColor: "rgba(139, 92, 246, 0.35)" }}
+                    className="ambient-glass-soft p-8 rounded-xl transition-all duration-300 flex flex-col items-center text-center md:items-start md:text-left"
                 >
                     {item.icon}
                     <h4 className="font-medium text-xl text-white mb-3">{item.title}</h4>

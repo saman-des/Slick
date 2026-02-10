@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 export const FeatureDeepDive: React.FC = () => {
   return (
-    <section id="features" className="border-b border-white/10">
+    <section id="features" className="section-ambient ambient-feature border-b border-white/10">
       
       {/* Feature 1: Understanding - PRIMARY ORANGE */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="p-12 md:p-32 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/10 bg-[#050505]">
+        <div className="p-12 md:p-32 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/10 bg-black/25 backdrop-blur-[2px]">
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -53,16 +53,16 @@ export const FeatureDeepDive: React.FC = () => {
              ))}
           </ul>
         </div>
-        <div className="relative min-h-[600px] bg-neutral-900/20 overflow-hidden group">
+        <div className="relative min-h-[600px] bg-black/30 overflow-hidden group">
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555421689-d68471e18963?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#120b22]/78 to-transparent" />
             <div className="absolute bottom-0 left-0 w-full p-16">
                  <motion.div 
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ type: "spring", bounce: 0.4, delay: 0.5 }}
-                    className="bg-neutral-900/90 backdrop-blur border border-white/10 rounded-xl p-8 shadow-2xl transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
+                    className="ambient-glass rounded-xl p-8 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
                  >
                     <div className="flex justify-between items-center mb-6">
                         <span className="text-xs font-mono text-neutral-500">RISK ASSESSMENT</span>
@@ -80,7 +80,7 @@ export const FeatureDeepDive: React.FC = () => {
 
       {/* Feature 2: Chat & Response - SECONDARY PURPLE */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
-         <div className="relative min-h-[600px] bg-neutral-900/20 border-b lg:border-b-0 lg:border-r border-white/10 order-2 lg:order-1 overflow-hidden">
+         <div className="relative min-h-[600px] bg-black/30 border-b lg:border-b-0 lg:border-r border-white/10 order-2 lg:order-1 overflow-hidden">
              {/* Abstract Grid visual */}
              <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
              
@@ -104,7 +104,7 @@ export const FeatureDeepDive: React.FC = () => {
                             whileInView={{ scale: 1, opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.8 }}
-                            className="bg-secondary-900/50 border border-secondary-500/20 text-secondary-100 px-6 py-4 rounded-2xl rounded-tl-sm text-base shadow-lg leading-relaxed"
+                            className="bg-secondary-900/40 border border-secondary-500/30 text-secondary-100 px-6 py-4 rounded-2xl rounded-tl-sm text-base shadow-lg leading-relaxed"
                          >
                             Here is a firm but professional draft: "While we are excited to proceed, we cannot agree to exclusivity at this stage..."
                          </motion.div>
@@ -124,7 +124,7 @@ export const FeatureDeepDive: React.FC = () => {
                 </div>
              </div>
          </div>
-         <div className="p-12 md:p-32 flex flex-col justify-center order-1 lg:order-2 bg-[#050505]">
+         <div className="p-12 md:p-32 flex flex-col justify-center order-1 lg:order-2 bg-black/25 backdrop-blur-[2px]">
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -147,7 +147,7 @@ export const FeatureDeepDive: React.FC = () => {
             transition={{ delay: 0.3 }}
             className="text-neutral-400 text-lg md:text-xl leading-relaxed mb-10"
           >
-             Don't just read—converse. Ask questions, clarify terms, and then let the AI write the email for you.
+             Don't just read. Converse with the document, clarify terms, and then let AI write the email for you.
           </motion.p>
           <ul className="space-y-5 text-neutral-300">
              {[

@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export const BentoGrid: React.FC = () => {
   return (
-    <section className="border-b border-white/10 bg-[#050505]">
-      <div className="grid grid-cols-1 md:grid-cols-3 min-h-[700px]">
+    <section className="section-ambient ambient-bento border-b border-white/10">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 min-h-[700px]">
         
         {/* Card 1: Multilingual - PRIMARY */}
         <motion.div 
@@ -13,9 +13,9 @@ export const BentoGrid: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-2 border-b md:border-b-0 md:border-r border-white/10 p-12 md:p-20 relative overflow-hidden group"
+            className="md:col-span-2 border-b md:border-b-0 md:border-r border-white/10 p-12 md:p-20 relative overflow-hidden group bg-black/25 backdrop-blur-[2px]"
         >
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-b from-primary-500/10 to-transparent blur-[80px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-b from-secondary-500/20 via-secondary-700/10 to-transparent blur-[80px] rounded-full pointer-events-none" />
             
             <div className="relative z-10">
                 <div className="inline-flex items-center gap-2 mb-8 text-primary-400 font-mono text-sm uppercase">
@@ -28,7 +28,7 @@ export const BentoGrid: React.FC = () => {
                 </p>
                 
                 <div className="flex gap-4">
-                     {["English", "Español", "Deutsch"].map((lang, i) => (
+                     {["English", "Spanish", "Deutsch"].map((lang, i) => (
                          <motion.div 
                             key={lang}
                             initial={{ opacity: 0, y: 10 }}
@@ -60,9 +60,9 @@ export const BentoGrid: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="p-12 md:p-20 relative overflow-hidden group bg-neutral-950"
+            className="p-12 md:p-20 relative overflow-hidden group bg-black/30 backdrop-blur-[2px]"
         >
-            <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-secondary-900/10 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-secondary-900/20 via-secondary-700/10 to-transparent pointer-events-none" />
             
             <div className="inline-flex items-center gap-2 mb-8 text-secondary-400 font-mono text-sm uppercase">
                 <GitCompare className="w-5 h-5" />
